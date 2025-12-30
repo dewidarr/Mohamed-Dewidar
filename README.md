@@ -4,7 +4,7 @@ Senior Flutter Developer from Nasr City, Egypt 🇪🇬 with over 5 years of exp
 
 📍 **Nasr City, Cairo, Egypt** | 📧 **mohamed.dewidar28@gmail.com** | 📱 **+20 1272553815**
 
-🌐 **[Portfolio](https://eslamabid175.github.io)** | 💼 **[LinkedIn](https://www.linkedin.com/in/mohamed-dewidar-23ba90142)** | 🐙 **[GitHub](https://github.com/dewidarr)**
+🌐 **[Portfolio](https://dewidarr.github.io/Mohamed-Dewidar/)** | 💼 **[LinkedIn](https://www.linkedin.com/in/mohamed-dewidar-23ba90142)** | 🐙 **[GitHub](https://github.com/dewidarr)**
 
 ---
 
@@ -92,7 +92,7 @@ Senior Flutter Developer from Nasr City, Egypt 🇪🇬 with over 5 years of exp
 - 📱 Phone: [+20 1272553815](tel:+201272553815)
 - 💼 LinkedIn: [linkedin.com/in/mohamed-dewidar-23ba90142](https://www.linkedin.com/in/mohamed-dewidar-23ba90142)
 - 🐙 GitHub: [github.com/dewidarr](https://github.com/dewidarr)
-- 🌐 Portfolio: [eslamabid175.github.io](https://eslamabid175.github.io)
+- 🌐 Portfolio: [eslamabid175.github.io](https://dewidarr.github.io/Mohamed-Dewidar/)
 
 ---
 
@@ -100,7 +100,7 @@ Senior Flutter Developer from Nasr City, Egypt 🇪🇬 with over 5 years of exp
 
 ### 💼 Open for Full-time Opportunities
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-1e30f3?style=for-the-badge&logo=google-chrome&logoColor=white)](https://eslamabid175.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-1e30f3?style=for-the-badge&logo=google-chrome&logoColor=white)](https://dewidarr.github.io/Mohamed-Dewidar/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohamed-dewidar-23ba90142)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/dewidarr)
 
