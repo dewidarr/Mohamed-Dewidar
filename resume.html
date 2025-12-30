@@ -20,22 +20,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!-- Premium Custom Theme CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body {
             padding-top: 80px;
-        }
-
-        .bg-gradient-primary-to-secondary {
-            background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .timeline {
@@ -51,7 +42,7 @@
             left: 40px;
             height: 100%;
             width: 3px;
-            background: linear-gradient(180deg, #1e30f3 0%, #e21e80 100%);
+            background: linear-gradient(180deg, #3b82f6 0%, #7c3aed 100%);
             border-radius: 3px;
         }
 
@@ -68,9 +59,9 @@
             width: 23px;
             height: 23px;
             border-radius: 50%;
-            background: #1e30f3;
+            background: #2563eb;
             z-index: 1;
-            box-shadow: 0 0 0 4px white, 0 0 0 6px #1e30f3;
+            box-shadow: 0 0 0 4px white, 0 0 0 6px #2563eb;
         }
 
         .experience-card {
@@ -85,12 +76,15 @@
 
         .experience-card .card {
             border-radius: 16px;
-            border: 1px solid #e9ecef;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
         }
 
         .experience-card:hover .card {
-            border-color: #1e30f3;
-            box-shadow: 0 15px 40px rgba(30, 48, 243, 0.15) !important;
+            border-color: #2563eb;
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15) !important;
         }
 
         .skill-category {
@@ -99,40 +93,14 @@
             padding: 1.5rem;
             margin-bottom: 1rem;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e9ecef;
+            border: 1px solid rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
 
         .skill-category:hover {
-            border-color: #1e30f3;
+            border-color: #7c3aed;
             transform: translateY(-3px);
-        }
-
-        .skill-tag {
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            margin: 0.2rem;
-            background: #f8f9fa;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            transition: all 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            background: #1e30f3;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .certification-card {
-            transition: all 0.3s ease;
-            border-left: 4px solid transparent;
-            border-radius: 12px;
-        }
-
-        .certification-card:hover {
-            border-left-color: #1e30f3;
-            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);
         }
 
         .download-btn {
@@ -143,48 +111,52 @@
             animation: pulse 2s infinite;
             border-radius: 50px;
             padding: 1rem 1.5rem;
-            box-shadow: 0 10px 30px rgba(30, 48, 243, 0.3);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            border: none;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 100%);
         }
 
         @keyframes pulse {
             0% {
-                box-shadow: 0 0 0 0 rgba(30, 48, 243, 0.4);
+                box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
             }
 
             70% {
-                box-shadow: 0 0 0 15px rgba(30, 48, 243, 0);
+                box-shadow: 0 0 0 15px rgba(37, 99, 235, 0);
             }
 
             100% {
-                box-shadow: 0 0 0 0 rgba(30, 48, 243, 0);
+                box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
             }
         }
 
         .stat-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
             border-radius: 16px;
             padding: 1.5rem;
             text-align: center;
-            border: 1px solid #e9ecef;
+            border: 1px solid rgba(255, 255, 255, 0.5);
             transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
         .stat-card:hover {
             transform: translateY(-5px);
-            border-color: #1e30f3;
-            box-shadow: 0 10px 30px rgba(30, 48, 243, 0.1);
+            border-color: #2563eb;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
         }
 
         .stat-number {
             font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e30f3;
-        }
-
-        .education-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 16px;
-            padding: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .language-badge {
@@ -195,6 +167,12 @@
             background: white;
             border-radius: 50px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .language-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -222,10 +200,10 @@
 <body class="d-flex flex-column h-100 bg-light">
     <main class="flex-shrink-0">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-3 fixed-top shadow-sm navbar-blur">
             <div class="container px-5">
                 <a class="navbar-brand" href="index.html">
-                    <span class="fw-bolder text-primary">MD</span>
+                    <span class="fw-bolder gradient-text-premium display-6" style="font-size: 1.5rem;">MD</span>
                     <span class="text-muted small ms-2 d-none d-md-inline">Senior Flutter Developer</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -235,7 +213,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="resume.html">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold text-primary"
+                                href="resume.html">Resume</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://github.com/dewidarr" target="_blank"><i
@@ -249,33 +228,27 @@
         </nav>
 
         <!-- Hero Section -->
-        <section class="py-5 bg-gradient-primary-to-secondary text-white">
-            <div class="container px-5 py-4">
+        <section class="py-5 hero-animated-bg text-white">
+            <div class="container px-5 py-4 hero-content">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
                         <h1 class="display-4 fw-bolder mb-2" data-aos="fade-right">Mohamed Dewidar</h1>
                         <h2 class="h4 fw-normal mb-3 opacity-90" data-aos="fade-right" data-aos-delay="100">Senior
                             Flutter Developer</h2>
                         <p class="lead mb-4 opacity-90" data-aos="fade-right" data-aos-delay="200">
-                            Flutter & Android Developer with over 5 years of experience in Flutter hybrid mobile
-                            development and 2 years in native Android.
-                            Skilled in building scalable mobile applications integrated with Django REST Framework
-                            backends.
+                            Flutter & Android Developer with over 5 years of experience in mobile development.
+                            Skilled in building scalable apps integrated with Django REST Framework.
                         </p>
                         <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="300">
-                            <span class="badge bg-light text-dark px-3 py-2"><i class="bi bi-geo-alt me-1"></i>Nasr
+                            <span class="badge glass-card text-dark px-3 py-2 border-0"><i
+                                    class="bi bi-geo-alt me-1 text-primary"></i>Nasr
                                 City, Egypt</span>
-                            <span class="badge bg-light text-dark px-3 py-2"><i
-                                    class="bi bi-envelope me-1"></i>mohamed.dewidar28@gmail.com</span>
-                            <span class="badge bg-light text-dark px-3 py-2"><i class="bi bi-phone me-1"></i>+20
+                            <span class="badge glass-card text-dark px-3 py-2 border-0"><i
+                                    class="bi bi-envelope me-1 text-primary"></i>mohamed.dewidar28@gmail.com</span>
+                            <span class="badge glass-card text-dark px-3 py-2 border-0"><i
+                                    class="bi bi-phone me-1 text-primary"></i>+20
                                 1272553815</span>
                         </div>
-                    </div>
-                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0" data-aos="fade-left">
-                        <a href="assets/resume/Mohamed_dewidar_Senior_Flutter_CV.pdf" download
-                            class="btn btn-light btn-lg px-4">
-                            <i class="bi bi-download me-2"></i>Download CV
-                        </a>
                     </div>
                 </div>
             </div>
@@ -289,25 +262,25 @@
                 <div class="col-6 col-md-3" data-aos="zoom-in">
                     <div class="stat-card">
                         <div class="stat-number">5+</div>
-                        <p class="text-muted mb-0 small fw-medium">Years Flutter</p>
+                        <p class="text-muted mb-0 small fw-bold">Years Flutter</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
                     <div class="stat-card">
                         <div class="stat-number">15+</div>
-                        <p class="text-muted mb-0 small fw-medium">Apps Delivered</p>
+                        <p class="text-muted mb-0 small fw-bold">Apps Delivered</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
                     <div class="stat-card">
                         <div class="stat-number">7+</div>
-                        <p class="text-muted mb-0 small fw-medium">Years Total Exp.</p>
+                        <p class="text-muted mb-0 small fw-bold">Years Total Exp.</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
                     <div class="stat-card">
                         <div class="stat-number">40%</div>
-                        <p class="text-muted mb-0 small fw-medium">Deploy Time Reduced</p>
+                        <p class="text-muted mb-0 small fw-bold">Deploy Time Reduced</p>
                     </div>
                 </div>
             </div>
@@ -315,7 +288,7 @@
             <!-- Summary Section -->
             <div class="row mb-5">
                 <div class="col-12" data-aos="fade-up">
-                    <div class="card border-0 shadow-sm rounded-4 p-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 glass-card bg-white">
                         <h3 class="fw-bold mb-3"><i class="bi bi-person-circle text-primary me-2"></i>Professional
                             Summary</h3>
                         <p class="text-muted mb-0 lead">
@@ -356,7 +329,8 @@
                                                         <p class="text-muted small mb-0"><i
                                                                 class="bi bi-geo-alt me-1"></i>Giza, Egypt</p>
                                                     </div>
-                                                    <span class="badge bg-success px-3 py-2">Jul 2024 - Present</span>
+                                                    <span class="badge bg-success px-3 py-2 rounded-pill">Jul 2024 -
+                                                        Present</span>
                                                 </div>
                                                 <ul class="mb-3 text-muted">
                                                     <li>Led a team of Flutter developers in designing, building, and
@@ -389,7 +363,8 @@
                                                         <p class="text-muted small mb-0"><i
                                                                 class="bi bi-geo-alt me-1"></i>Nasr City, Egypt</p>
                                                     </div>
-                                                    <span class="badge bg-primary px-3 py-2">Jan 2020 - Jul 2024</span>
+                                                    <span class="badge bg-primary px-3 py-2 rounded-pill">Jan 2020 - Jul
+                                                        2024</span>
                                                 </div>
                                                 <ul class="mb-3 text-muted">
                                                     <li><strong>Cogens School Management System</strong> - Role: Lead
@@ -421,7 +396,8 @@
                                                         <p class="text-muted small mb-0"><i
                                                                 class="bi bi-geo-alt me-1"></i>Nasr City, Egypt</p>
                                                     </div>
-                                                    <span class="badge bg-secondary px-3 py-2">Oct 2018 - Sep
+                                                    <span class="badge bg-secondary px-3 py-2 rounded-pill">Oct 2018 -
+                                                        Sep
                                                         2019</span>
                                                 </div>
                                                 <ul class="mb-3 text-muted">
@@ -454,13 +430,15 @@
                             <h6 class="fw-bold text-primary mb-3"><i class="bi bi-phone me-2"></i>Mobile Development
                             </h6>
                             <div>
-                                <span class="skill-tag">Flutter Bloc/Cubit</span>
-                                <span class="skill-tag">Provider</span>
-                                <span class="skill-tag">Riverpod</span>
-                                <span class="skill-tag">Event Bus</span>
-                                <span class="skill-tag">Flutter Hooks</span>
-                                <span class="skill-tag">Go Router</span>
-                                <span class="skill-tag">Web & Android Native</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Flutter
+                                    Bloc/Cubit</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Provider</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Riverpod</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Event Bus</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Flutter Hooks</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Go Router</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Web & Android
+                                    Native</span>
                             </div>
                         </div>
 
@@ -468,11 +446,13 @@
                             <h6 class="fw-bold text-success mb-3"><i class="bi bi-layers me-2"></i>Architecture & Design
                             </h6>
                             <div>
-                                <span class="skill-tag">Clean Architecture</span>
-                                <span class="skill-tag">MVVM</span>
-                                <span class="skill-tag">SOLID</span>
-                                <span class="skill-tag">Modular Architecture</span>
-                                <span class="skill-tag">Design Patterns</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Clean
+                                    Architecture</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">MVVM</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">SOLID</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Modular
+                                    Architecture</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Design Patterns</span>
                             </div>
                         </div>
 
@@ -480,26 +460,28 @@
                             <h6 class="fw-bold text-warning mb-3"><i class="bi bi-server me-2"></i>Backend & Database
                             </h6>
                             <div>
-                                <span class="skill-tag">Python (Django REST)</span>
-                                <span class="skill-tag">Glide/Retrofit</span>
-                                <span class="skill-tag">Dio/Http</span>
-                                <span class="skill-tag">JSON Serializable</span>
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">Firebase</span>
-                                <span class="skill-tag">Hive/SharedPrefs</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Python (Django
+                                    REST)</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Glide/Retrofit</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Dio/Http</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">JSON Serializable</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">MySQL</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Firebase</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Hive/SharedPrefs</span>
                             </div>
                         </div>
 
                         <div class="skill-category">
                             <h6 class="fw-bold text-info mb-3"><i class="bi bi-gear me-2"></i>DevOps & Infra</h6>
                             <div>
-                                <span class="skill-tag">PayTabs</span>
-                                <span class="skill-tag">PayPal</span>
-                                <span class="skill-tag">Stripe</span>
-                                <span class="skill-tag">Authorize.net</span>
-                                <span class="skill-tag">Play Store</span>
-                                <span class="skill-tag">App Store</span>
-                                <span class="skill-tag">Git (GitHub/Bitbucket)</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">PayTabs</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">PayPal</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Stripe</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Authorize.net</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Play Store</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">App Store</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Git
+                                    (GitHub/Bitbucket)</span>
                             </div>
                         </div>
 
@@ -507,21 +489,21 @@
                             <h6 class="fw-bold text-danger mb-3"><i class="bi bi-diagram-3 me-2"></i>State Management
                             </h6>
                             <div>
-                                <span class="skill-tag">BLoC/Cubit</span>
-                                <span class="skill-tag">Riverpod</span>
-                                <span class="skill-tag">Provider</span>
-                                <span class="skill-tag">GetX</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">BLoC/Cubit</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Riverpod</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Provider</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">GetX</span>
                             </div>
                         </div>
 
                         <div class="skill-category">
                             <h6 class="fw-bold text-secondary mb-3"><i class="bi bi-kanban me-2"></i>Methodologies</h6>
                             <div>
-                                <span class="skill-tag">Agile/Scrum</span>
-                                <span class="skill-tag">JIRA</span>
-                                <span class="skill-tag">Git Flow</span>
-                                <span class="skill-tag">Unit Testing</span>
-                                <span class="skill-tag">Code Reviews</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Agile/Scrum</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">JIRA</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Git Flow</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Unit Testing</span>
+                                <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Code Reviews</span>
                             </div>
                         </div>
                     </section>
@@ -534,59 +516,11 @@
                         <div class="d-flex flex-wrap gap-3">
                             <div class="language-badge">
                                 <span class="fw-bold">🇪🇬 Arabic</span>
-                                <span class="badge bg-success">Native</span>
+                                <span class="badge bg-success ms-2">Native</span>
                             </div>
                             <div class="language-badge">
                                 <span class="fw-bold">🇺🇸 English</span>
-                                <span class="badge bg-primary">Fluent</span>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Contact Info -->
-                    <section data-aos="fade-left" data-aos-delay="200">
-                        <h2 class="fw-bolder mb-4">
-                            <i class="bi bi-person-lines-fill text-primary me-2"></i>Contact
-                        </h2>
-                        <div class="card border-0 shadow-sm rounded-4">
-                            <div class="card-body p-4">
-                                <div class="mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-envelope text-primary me-3" style="font-size: 1.25rem;"></i>
-                                        <div>
-                                            <p class="text-muted small mb-0">Email</p>
-                                            <a href="mailto:mohamed.dewidar28@gmail.com"
-                                                class="text-decoration-none">mohamed.dewidar28@gmail.com</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-phone text-primary me-3" style="font-size: 1.25rem;"></i>
-                                        <div>
-                                            <p class="text-muted small mb-0">Phone</p>
-                                            <a href="tel:+201272553815" class="text-decoration-none">+20 1272553815</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-geo-alt text-primary me-3" style="font-size: 1.25rem;"></i>
-                                        <div>
-                                            <p class="text-muted small mb-0">Location</p>
-                                            <span>Nasr City, Cairo, Egypt</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="d-flex gap-2">
-                                    <a href="https://github.com/dewidarr" target="_blank"
-                                        class="btn btn-outline-dark btn-sm flex-fill"><i
-                                            class="bi bi-github me-1"></i>GitHub</a>
-                                    <a href="https://www.linkedin.com/in/mohamed-dewidar-23ba90142" target="_blank"
-                                        class="btn btn-outline-primary btn-sm flex-fill"><i
-                                            class="bi bi-linkedin me-1"></i>LinkedIn</a>
-                                </div>
+                                <span class="badge bg-primary ms-2">Fluent</span>
                             </div>
                         </div>
                     </section>
@@ -595,19 +529,18 @@
         </div>
 
         <!-- Download Resume Button -->
-        <!-- Download Resume Button -->
         <a href="assets/resume/Mohamed_dewidar_Senior_Flutter_CV.pdf" download
-            class="btn btn-primary download-btn shadow-lg">
+            class="btn btn-primary download-btn shadow-lg text-white">
             <i class="bi bi-download me-2"></i>Download CV
         </a>
     </main>
 
     <!-- Footer-->
-    <footer class="bg-white py-4 mt-auto">
+    <footer class="bg-white py-4 mt-auto border-top">
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                 <div class="col-auto">
-                    <div class="small m-0">Copyright &copy; Mohamed Dewidar 2025. All rights reserved.</div>
+                    <div class="small m-0 text-muted">Copyright &copy; Mohamed Dewidar 2025. All rights reserved.</div>
                 </div>
                 <div class="col-auto">
                     <a class="small text-muted text-decoration-none me-3" href="https://github.com/dewidarr"

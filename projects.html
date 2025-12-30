@@ -19,22 +19,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!-- Premium Custom Theme CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body {
             padding-top: 80px;
-        }
-
-        .bg-gradient-primary-to-secondary {
-            background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .project-item {
@@ -46,129 +37,9 @@
             display: none !important;
         }
 
+        /* Overrides to ensure compatibility with custom.css */
         .project-card {
-            transition: all 0.3s ease;
-            overflow: hidden;
-            height: 100%;
-            border-radius: 16px;
-            border: 1px solid #e9ecef;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15) !important;
-            border-color: #1e30f3;
-        }
-
-        .project-image {
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover .project-image {
-            transform: scale(1.05);
-        }
-
-        .tech-badge {
-            font-size: 0.7rem;
-            padding: 0.3rem 0.6rem;
-            border-radius: 20px;
-        }
-
-        .filter-btn {
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 25px;
-            padding: 0.6rem 1.5rem;
-            font-weight: 500;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background-color: #1e30f3 !important;
-            color: white !important;
-            border-color: #1e30f3 !important;
-            transform: translateY(-2px);
-        }
-
-        .status-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            z-index: 2;
-        }
-
-        .company-section {
-            margin-bottom: 4rem;
-        }
-
-        .company-header {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 16px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .screenshot-gallery {
-            display: flex;
-            gap: 0.5rem;
-            overflow-x: auto;
-            padding-bottom: 0.5rem;
-        }
-
-        .screenshot-thumb {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .screenshot-thumb:hover {
-            transform: scale(1.1);
-            border-color: #1e30f3;
-        }
-
-        .store-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .store-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .web-panel-card {
-            background: linear-gradient(135deg, #1e30f3 0%, #4a5af8 100%);
-            color: white;
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .web-panel-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(30, 48, 243, 0.3);
-        }
-
-        .project-description {
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .project-image {
-                height: 180px;
-            }
+            border: none !important;
         }
     </style>
 </head>
@@ -176,10 +47,10 @@
 <body class="d-flex flex-column h-100 bg-light">
     <main class="flex-shrink-0">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-3 fixed-top shadow-sm navbar-blur">
             <div class="container px-5">
                 <a class="navbar-brand" href="index.html">
-                    <span class="fw-bolder text-primary">MD</span>
+                    <span class="fw-bolder gradient-text-premium display-6" style="font-size: 1.5rem;">MD</span>
                     <span class="text-muted small ms-2 d-none d-md-inline">Senior Flutter Developer</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -190,7 +61,8 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold text-primary"
+                                href="projects.html">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://github.com/dewidarr" target="_blank"><i
                                     class="bi bi-github"></i></a></li>
@@ -203,23 +75,24 @@
         </nav>
 
         <!-- Hero Section -->
-        <section class="py-5 bg-gradient-primary-to-secondary text-white">
-            <div class="container px-5 py-4">
+        <section class="py-5 hero-animated-bg text-white">
+            <div class="container px-5 py-4 hero-content">
                 <div class="text-center">
-                    <h1 class="display-4 fw-bolder mb-3" data-aos="fade-down">My Projects</h1>
-                    <p class="lead mb-0" data-aos="fade-up">Production apps deployed to App Store & Play Store</p>
+                    <h1 class="display-3 fw-bolder mb-3" data-aos="fade-down">My Projects</h1>
+                    <p class="lead mb-0 text-dark fw-normal glass-card d-inline-block px-4 py-2" data-aos="fade-up">
+                        Production apps deployed to App Store & Play Store</p>
                 </div>
             </div>
         </section>
 
         <!-- Filter Buttons -->
-        <section class="py-4 bg-white sticky-top shadow-sm">
+        <section class="py-4 bg-white sticky-top shadow-sm" style="top: 70px; z-index: 1020;">
             <div class="container px-5">
                 <div class="d-flex justify-content-center flex-wrap gap-2">
-                    <button class="btn btn-outline-primary filter-btn active" data-filter="all">All Projects</button>
-                    <button class="btn btn-outline-primary filter-btn" data-filter="cogens">Cogens</button>
-                    <button class="btn btn-outline-primary filter-btn" data-filter="3ivision">3I Vision</button>
-                    <button class="btn btn-outline-primary filter-btn" data-filter="web">Web Panels</button>
+                    <button class="btn btn-outline-premium filter-btn active" data-filter="all">All Projects</button>
+                    <button class="btn btn-outline-premium filter-btn" data-filter="cogens">Cogens</button>
+                    <button class="btn btn-outline-premium filter-btn" data-filter="3ivision">3I Vision</button>
+                    <button class="btn btn-outline-premium filter-btn" data-filter="web">Web Panels</button>
                 </div>
             </div>
         </section>
@@ -230,13 +103,13 @@
 
                 <!-- ============ COGENS SECTION ============ -->
                 <div class="company-section project-item" data-category="cogens">
-                    <div class="company-header" data-aos="fade-up">
+                    <div class="company-badge-enhanced mb-5" data-aos="fade-up">
                         <div class="row align-items-center">
                             <div class="col-md-8">
                                 <div class="d-flex align-items-center mb-2">
                                     <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center me-3"
-                                        style="width: 50px; height: 50px;">
-                                        <i class="bi bi-building text-primary" style="font-size: 1.25rem;"></i>
+                                        style="width: 60px; height: 60px;">
+                                        <i class="bi bi-building text-primary" style="font-size: 1.5rem;"></i>
                                     </div>
                                     <div>
                                         <h2 class="fw-bolder mb-0">Cogens</h2>
@@ -244,13 +117,13 @@
                                             2024</p>
                                     </div>
                                 </div>
-                                <p class="text-muted mb-0 mt-3">Developed and led the implementation of a comprehensive
+                                <p class="text-muted mb-0 mt-3 ps-lg-5">Developed and led the implementation of a
+                                    comprehensive
                                     School Management System designed to streamline communication, attendance, payments,
-                                    and daily operations between schools, parents, teachers, and vendors. The ecosystem
-                                    includes multiple integrated applications and panels for different user roles</p>
+                                    and daily operations. The ecosystem includes multiple integrated applications.</p>
                             </div>
                             <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                                <a href="https://cogens.com/" target="_blank" class="btn btn-primary">
+                                <a href="https://cogens.com/" target="_blank" class="btn btn-premium">
                                     <i class="bi bi-globe me-2"></i>Visit Website
                                 </a>
                             </div>
@@ -260,31 +133,30 @@
                     <div class="row g-4">
                         <!-- Cogens Parent App -->
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card project-card border-0 shadow-sm h-100">
+                            <div class="card project-card-premium h-100">
                                 <div class="position-relative overflow-hidden">
-                                    <span class="badge bg-success status-badge">Live</span>
+                                    <div class="position-absolute top-0 end-0 m-3 z-1">
+                                        <span class="badge bg-success shadow-sm">Live</span>
+                                    </div>
                                     <img src="assets/screenshots/cogens/parent/1.webp"
                                         class="card-img-top project-image" alt="Cogens Parent App">
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body p-4">
                                     <h5 class="card-title fw-bold">Cogens Parent</h5>
-                                    <p class="card-text project-description text-muted">Enables parents to track student
+                                    <p class="card-text text-muted small mb-3">Enables parents to track student
                                         attendance, receive announcements, make payments, and manage daily school
-                                        interactions. Connects parents with the school dismissal system.</p>
+                                        interactions.</p>
                                     <div class="mb-3">
-                                        <span
-                                            class="badge tech-badge bg-primary bg-opacity-10 text-primary me-1">Flutter</span>
-                                        <span
-                                            class="badge tech-badge bg-success bg-opacity-10 text-success me-1">BLoC</span>
-                                        <span
-                                            class="badge tech-badge bg-warning bg-opacity-10 text-warning me-1">Firebase</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Flutter</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">BLoC</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Firebase</span>
                                     </div>
                                     <div class="d-flex gap-2 flex-wrap">
                                         <a href="https://apps.apple.com/eg/app/cogens-parent/id1607885469"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-dark"><i
+                                            target="_blank" class="btn btn-sm btn-outline-dark flex-grow-1"><i
                                                 class="bi bi-apple"></i>App Store</a>
                                         <a href="https://play.google.com/store/apps/details?id=com.trispects.school.parents"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-success"><i
+                                            target="_blank" class="btn btn-sm btn-outline-success flex-grow-1"><i
                                                 class="bi bi-google-play"></i>Play Store</a>
                                     </div>
                                 </div>
@@ -293,31 +165,30 @@
 
                         <!-- Cogens Student App -->
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="card project-card border-0 shadow-sm h-100">
+                            <div class="card project-card-premium h-100">
                                 <div class="position-relative overflow-hidden">
-                                    <span class="badge bg-success status-badge">Live</span>
+                                    <div class="position-absolute top-0 end-0 m-3 z-1">
+                                        <span class="badge bg-success shadow-sm">Live</span>
+                                    </div>
                                     <img src="assets/screenshots/cogens/student/1.webp"
                                         class="card-img-top project-image" alt="Cogens Student App">
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body p-4">
                                     <h5 class="card-title fw-bold">Cogens Student</h5>
-                                    <p class="card-text project-description text-muted">Allows students to view
+                                    <p class="card-text text-muted small mb-3">Allows students to view
                                         schedules, grades, attendance, and receive school updates in real time. A
                                         complete student portal experience.</p>
                                     <div class="mb-3">
-                                        <span
-                                            class="badge tech-badge bg-primary bg-opacity-10 text-primary me-1">Flutter</span>
-                                        <span
-                                            class="badge tech-badge bg-success bg-opacity-10 text-success me-1">Real-time</span>
-                                        <span class="badge tech-badge bg-info bg-opacity-10 text-info me-1">REST
-                                            APIs</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Flutter</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Real-time</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">REST API</span>
                                     </div>
                                     <div class="d-flex gap-2 flex-wrap">
                                         <a href="https://apps.apple.com/eg/app/cogens-student/id6476619759"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-dark"><i
+                                            target="_blank" class="btn btn-sm btn-outline-dark flex-grow-1"><i
                                                 class="bi bi-apple"></i>App Store</a>
                                         <a href="https://play.google.com/store/apps/details?id=com.trispects.school.students"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-success"><i
+                                            target="_blank" class="btn btn-sm btn-outline-success flex-grow-1"><i
                                                 class="bi bi-google-play"></i>Play Store</a>
                                     </div>
                                 </div>
@@ -326,31 +197,30 @@
 
                         <!-- Cogens Bus Driver App -->
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="card project-card border-0 shadow-sm h-100">
+                            <div class="card project-card-premium h-100">
                                 <div class="position-relative overflow-hidden">
-                                    <span class="badge bg-success status-badge">Live</span>
+                                    <div class="position-absolute top-0 end-0 m-3 z-1">
+                                        <span class="badge bg-success shadow-sm">Live</span>
+                                    </div>
                                     <img src="assets/screenshots/cogens/bus/1.webp" class="card-img-top project-image"
                                         alt="Cogens Bus Driver App">
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body p-4">
                                     <h5 class="card-title fw-bold">Cogens Bus Driver</h5>
-                                    <p class="card-text project-description text-muted">Connects school drivers with the
+                                    <p class="card-text text-muted small mb-3">Connects school drivers with the
                                         school and parents. Real-time GPS tracking using Dart Isolates and platform
-                                        channels for persistent socket connections.</p>
+                                        channels.</p>
                                     <div class="mb-3">
-                                        <span
-                                            class="badge tech-badge bg-primary bg-opacity-10 text-primary me-1">Flutter</span>
-                                        <span
-                                            class="badge tech-badge bg-danger bg-opacity-10 text-danger me-1">Isolates</span>
-                                        <span
-                                            class="badge tech-badge bg-warning bg-opacity-10 text-warning me-1">GPS</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Flutter</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Isolates</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">GPS</span>
                                     </div>
                                     <div class="d-flex gap-2 flex-wrap">
                                         <a href="https://apps.apple.com/eg/app/cogens-bus-driver/id6479618217"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-dark"><i
+                                            target="_blank" class="btn btn-sm btn-outline-dark flex-grow-1"><i
                                                 class="bi bi-apple"></i>App Store</a>
                                         <a href="https://play.google.com/store/apps/details?id=com.trispects.school.bus.driver"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-success"><i
+                                            target="_blank" class="btn btn-sm btn-outline-success flex-grow-1"><i
                                                 class="bi bi-google-play"></i>Play Store</a>
                                     </div>
                                 </div>
@@ -359,31 +229,31 @@
 
                         <!-- Cogens Staff App -->
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                            <div class="card project-card border-0 shadow-sm h-100">
+                            <div class="card project-card-premium h-100">
                                 <div class="position-relative overflow-hidden">
-                                    <span class="badge bg-success status-badge">Live</span>
+                                    <div class="position-absolute top-0 end-0 m-3 z-1">
+                                        <span class="badge bg-success shadow-sm">Live</span>
+                                    </div>
                                     <img src="assets/screenshots/cogens/staff/1.webp" class="card-img-top project-image"
                                         alt="Cogens Staff App">
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body p-4">
                                     <h5 class="card-title fw-bold">Cogens Staff</h5>
-                                    <p class="card-text project-description text-muted">Used by teachers and school
+                                    <p class="card-text text-muted small mb-3">Used by teachers and school
                                         staff to record attendance, communicate with parents, and manage academic
                                         schedules efficiently.</p>
                                     <div class="mb-3">
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Flutter</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">BLoC</span>
                                         <span
-                                            class="badge tech-badge bg-primary bg-opacity-10 text-primary me-1">Flutter</span>
-                                        <span
-                                            class="badge tech-badge bg-success bg-opacity-10 text-success me-1">BLoC</span>
-                                        <span
-                                            class="badge tech-badge bg-info bg-opacity-10 text-info me-1">Notifications</span>
+                                            class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Notifications</span>
                                     </div>
                                     <div class="d-flex gap-2 flex-wrap">
                                         <a href="https://apps.apple.com/eg/app/cogens-staff/id1607885245"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-dark"><i
+                                            target="_blank" class="btn btn-sm btn-outline-dark flex-grow-1"><i
                                                 class="bi bi-apple"></i>App Store</a>
                                         <a href="https://play.google.com/store/apps/details?id=com.trispects.school.management"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-success"><i
+                                            target="_blank" class="btn btn-sm btn-outline-success flex-grow-1"><i
                                                 class="bi bi-google-play"></i>Play Store</a>
                                     </div>
                                 </div>
@@ -394,52 +264,22 @@
                     <!-- Cogens Web Panels -->
                     <div class="row g-4 mt-4 project-item" data-category="web cogens">
                         <div class="col-12">
-                            <h4 class="fw-bold mb-4"><i class="bi bi-globe me-2"></i>Web Panels (Django Backend)</h4>
+                            <h4 class="fw-bold mb-4 mt-5 ps-3 border-start border-4 border-primary"><i
+                                    class="bi bi-globe me-2"></i>Web Panels (Django Backend)</h4>
                         </div>
 
                         <!-- Admin Panel -->
                         <div class="col-lg-6" data-aos="fade-up">
-                            <div class="project-card h-100">
-                                <div class="project-screenshots">
+                            <div class="card glass-card h-100 p-3">
+                                <div class="project-screenshots mb-3 rounded overflow-hidden">
                                     <div id="adminCarousel" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <img src="assets/screenshots/cogens/admin panal/Screenshot_2025-12-28_14-24-12.png"
                                                     class="d-block w-100" alt="Admin Panel 1">
                                             </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/screenshots/cogens/admin panal/Screenshot_2025-12-28_14-36-41.png"
-                                                    class="d-block w-100" alt="Admin Panel 2">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/screenshots/cogens/admin panal/Screenshot_2025-12-28_14-37-01.png"
-                                                    class="d-block w-100" alt="Admin Panel 3">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/screenshots/cogens/admin panal/Screenshot_2025-12-28_14-37-16.png"
-                                                    class="d-block w-100" alt="Admin Panel 4">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/screenshots/cogens/admin panal/Screenshot_2025-12-28_14-37-39.png"
-                                                    class="d-block w-100" alt="Admin Panel 5">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/screenshots/cogens/admin panal/Screenshot_2025-12-28_14-37-58.png"
-                                                    class="d-block w-100" alt="Admin Panel 6">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/screenshots/cogens/admin panal/Screenshot_2025-12-28_14-38-26.png"
-                                                    class="d-block w-100" alt="Admin Panel 7">
-                                            </div>
+                                            <!-- Add more items if needed -->
                                         </div>
-                                        <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#adminCarousel" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon"></span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button"
-                                            data-bs-target="#adminCarousel" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon"></span>
-                                        </button>
                                     </div>
                                 </div>
                                 <div class="project-info">
@@ -449,10 +289,10 @@
                                     </div>
                                     <p class="text-muted small mb-3">Provides full control for school administrators to
                                         manage students, staff, payments, attendance records, notifications, and
-                                        settings. Built with Django REST Framework.</p>
+                                        settings.</p>
                                     <div class="d-flex gap-2">
                                         <a href="https://school.cogens.com/#/login" target="_blank"
-                                            class="btn btn-primary btn-sm">
+                                            class="btn btn-primary btn-sm rounded-pill px-3">
                                             <i class="bi bi-box-arrow-up-right me-1"></i>Visit Panel
                                         </a>
                                     </div>
@@ -462,35 +302,15 @@
 
                         <!-- Vendor Panel -->
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="project-card h-100">
-                                <div class="project-screenshots">
+                            <div class="card glass-card h-100 p-3">
+                                <div class="project-screenshots mb-3 rounded overflow-hidden">
                                     <div id="vendorCarousel" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <img src="assets/screenshots/cogens/vendor/Screenshot_2025-12-28_14-45-48.png"
                                                     class="d-block w-100" alt="Vendor Panel 1">
                                             </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/screenshots/cogens/vendor/Screenshot_2025-12-28_14-46-16.png"
-                                                    class="d-block w-100" alt="Vendor Panel 2">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/screenshots/cogens/vendor/Screenshot_2025-12-28_14-46-28.png"
-                                                    class="d-block w-100" alt="Vendor Panel 3">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/screenshots/cogens/vendor/Screenshot_2025-12-28_14-46-51.png"
-                                                    class="d-block w-100" alt="Vendor Panel 4">
-                                            </div>
                                         </div>
-                                        <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#vendorCarousel" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon"></span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button"
-                                            data-bs-target="#vendorCarousel" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon"></span>
-                                        </button>
                                     </div>
                                 </div>
                                 <div class="project-info">
@@ -500,11 +320,10 @@
                                         <span class="badge bg-danger">Django</span>
                                     </div>
                                     <p class="text-muted small mb-3">A dedicated web portal for food vendors to manage
-                                        student meal orders, payments, and daily delivery reports. Integrated payment
-                                        handling.</p>
+                                        student meal orders, payments, and daily delivery reports.</p>
                                     <div class="d-flex gap-2">
                                         <a href="https://vendor.cogens.com/#/loginScreen" target="_blank"
-                                            class="btn btn-danger btn-sm">
+                                            class="btn btn-danger btn-sm rounded-pill px-3">
                                             <i class="bi bi-box-arrow-up-right me-1"></i>Visit Panel
                                         </a>
                                     </div>
@@ -515,26 +334,27 @@
                 </div>
 
                 <!-- ============ 3I VISION SECTION ============ -->
-                <div class="company-section project-item" data-category="3ivision">
-                    <div class="company-header" data-aos="fade-up">
+                <div class="company-section project-item mt-5" data-category="3ivision">
+                    <div class="company-badge-enhanced mb-5" data-aos="fade-up">
                         <div class="row align-items-center">
                             <div class="col-md-8">
                                 <div class="d-flex align-items-center mb-2">
                                     <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center me-3"
-                                        style="width: 50px; height: 50px;">
-                                        <i class="bi bi-eye text-success" style="font-size: 1.25rem;"></i>
+                                        style="width: 60px; height: 60px;">
+                                        <i class="bi bi-eye text-success" style="font-size: 1.5rem;"></i>
                                     </div>
                                     <div>
                                         <h2 class="fw-bolder mb-0">3I Vision</h2>
                                         <p class="text-muted mb-0">Team Lead Flutter Developer | Jul 2024 – Present</p>
                                     </div>
                                 </div>
-                                <p class="text-muted mb-0 mt-3">Engineered AI-powered applications with machine learning
+                                <p class="text-muted mb-0 mt-3 ps-lg-5">Engineered AI-powered applications with machine
+                                    learning
                                     for People Detection and License Plate Recognition. Optimized performance with
-                                    memory management and offline-first architecture.</p>
+                                    memory management.</p>
                             </div>
                             <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                                <a href="http://3i-vision.com/#/home" target="_blank" class="btn btn-success">
+                                <a href="http://3i-vision.com/#/home" target="_blank" class="btn btn-premium">
                                     <i class="bi bi-globe me-2"></i>Visit Website
                                 </a>
                             </div>
@@ -544,32 +364,31 @@
                     <div class="row g-4">
                         <!-- 3I Vision App -->
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card project-card border-0 shadow-sm h-100">
+                            <div class="card project-card-premium h-100">
                                 <div class="position-relative overflow-hidden">
-                                    <span class="badge bg-success status-badge">Live</span>
+                                    <div class="position-absolute top-0 end-0 m-3 z-1">
+                                        <span class="badge bg-success shadow-sm">Live</span>
+                                    </div>
                                     <img src="assets/screenshots/3i-vision/3i-vision app/1.webp"
                                         class="card-img-top project-image" alt="3I Vision App">
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body p-4">
                                     <h5 class="card-title fw-bold">3I Vision Application</h5>
-                                    <p class="card-text project-description text-muted">AI-powered app leveraging
+                                    <p class="card-text text-muted small mb-3">AI-powered app leveraging
                                         machine learning and computer vision for People Detection and Vehicle (License
-                                        Plate) Recognition. Integrated real-time data processing with Django REST APIs.
-                                    </p>
+                                        Plate) Recognition.</p>
                                     <div class="mb-3">
-                                        <span
-                                            class="badge tech-badge bg-primary bg-opacity-10 text-primary me-1">Flutter</span>
-                                        <span
-                                            class="badge tech-badge bg-danger bg-opacity-10 text-danger me-1">AI/ML</span>
-                                        <span
-                                            class="badge tech-badge bg-warning bg-opacity-10 text-warning me-1">Django</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Flutter</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">AI/ML</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Django</span>
                                     </div>
                                     <div class="d-flex gap-2 flex-wrap">
                                         <a href="https://apps.apple.com/eg/app/3i-vision/id6670479729" target="_blank"
-                                            class="store-btn btn btn-sm btn-outline-dark"><i class="bi bi-apple"></i>App
+                                            class="btn btn-sm btn-outline-dark flex-grow-1"><i
+                                                class="bi bi-apple"></i>App
                                             Store</a>
                                         <a href="https://play.google.com/store/apps/details?id=com.vision.watcharea"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-success"><i
+                                            target="_blank" class="btn btn-sm btn-outline-success flex-grow-1"><i
                                                 class="bi bi-google-play"></i>Play Store</a>
                                     </div>
                                 </div>
@@ -578,31 +397,29 @@
 
                         <!-- DataMind App -->
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="card project-card border-0 shadow-sm h-100">
+                            <div class="card project-card-premium h-100">
                                 <div class="position-relative overflow-hidden">
-                                    <span class="badge bg-success status-badge">Live</span>
+                                    <div class="position-absolute top-0 end-0 m-3 z-1">
+                                        <span class="badge bg-success shadow-sm">Live</span>
+                                    </div>
                                     <img src="assets/screenshots/3i-vision/datamind app/1.webp"
                                         class="card-img-top project-image" alt="DataMind App">
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body p-4">
                                     <h5 class="card-title fw-bold">DataMind Agent</h5>
-                                    <p class="card-text project-description text-muted">Intelligent mobile file manager
+                                    <p class="card-text text-muted small mb-3">Intelligent mobile file manager
                                         that scans devices to identify, classify, and organize files using smart keyword
-                                        analysis. Enhanced app performance through optimized Flutter architecture.</p>
+                                        analysis.</p>
                                     <div class="mb-3">
-                                        <span
-                                            class="badge tech-badge bg-primary bg-opacity-10 text-primary me-1">Flutter</span>
-                                        <span class="badge tech-badge bg-info bg-opacity-10 text-info me-1">File
-                                            Management</span>
-                                        <span
-                                            class="badge tech-badge bg-success bg-opacity-10 text-success me-1">AI</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Flutter</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">File Mgr</span>
                                     </div>
                                     <div class="d-flex gap-2 flex-wrap">
                                         <a href="https://apps.apple.com/eg/app/datamind-agent/id6754242027"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-dark"><i
+                                            target="_blank" class="btn btn-sm btn-outline-dark flex-grow-1"><i
                                                 class="bi bi-apple"></i>App Store</a>
                                         <a href="https://play.google.com/store/apps/details?id=com.datamind.agent"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-success"><i
+                                            target="_blank" class="btn btn-sm btn-outline-success flex-grow-1"><i
                                                 class="bi bi-google-play"></i>Play Store</a>
                                     </div>
                                 </div>
@@ -611,28 +428,27 @@
 
                         <!-- Adahi App -->
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="card project-card border-0 shadow-sm h-100">
+                            <div class="card project-card-premium h-100">
                                 <div class="position-relative overflow-hidden">
-                                    <span class="badge bg-success status-badge">Live</span>
-                                    <div class="placeholder-img bg-light d-flex align-items-center justify-content-center"
+                                    <div class="position-absolute top-0 end-0 m-3 z-1">
+                                        <span class="badge bg-success shadow-sm">Live</span>
+                                    </div>
+                                    <div class="bg-light d-flex align-items-center justify-content-center"
                                         style="height: 200px;">
                                         <i class="bi bi-cart-check text-muted" style="font-size: 3rem;"></i>
                                     </div>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body p-4">
                                     <h5 class="card-title fw-bold">Adahi App</h5>
-                                    <p class="card-text project-description text-muted">A specialized application
-                                        designed to streamline the management of sacrifices (Adahi) services, offering
-                                        users convenient booking and tracking options during the Eid season.</p>
+                                    <p class="card-text text-muted small mb-3">A specialized application
+                                        designed to streamline the management of sacrifices (Adahi) services.</p>
                                     <div class="mb-3">
-                                        <span
-                                            class="badge tech-badge bg-primary bg-opacity-10 text-primary me-1">Flutter</span>
-                                        <span
-                                            class="badge tech-badge bg-success bg-opacity-10 text-success me-1">BLoC</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Flutter</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">BLoC</span>
                                     </div>
                                     <div class="d-flex gap-2 flex-wrap">
                                         <a href="https://play.google.com/store/apps/details?id=com.adahi.sa"
-                                            target="_blank" class="store-btn btn btn-sm btn-outline-success"><i
+                                            target="_blank" class="btn btn-sm btn-outline-success flex-grow-1"><i
                                                 class="bi bi-google-play"></i>Play Store</a>
                                     </div>
                                 </div>
@@ -641,27 +457,24 @@
 
                         <!-- Aramco Inventory -->
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                            <div class="card project-card border-0 shadow-sm h-100">
+                            <div class="card project-card-premium h-100">
                                 <div class="position-relative overflow-hidden">
-                                    <span class="badge bg-warning text-dark status-badge">Internal</span>
-                                    <div class="placeholder-img bg-light d-flex align-items-center justify-content-center"
+                                    <div class="position-absolute top-0 end-0 m-3 z-1">
+                                        <span class="badge bg-warning text-dark shadow-sm">Internal</span>
+                                    </div>
+                                    <div class="bg-light d-flex align-items-center justify-content-center"
                                         style="height: 200px;">
                                         <i class="bi bi-box-seam text-muted" style="font-size: 3rem;"></i>
                                     </div>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body p-4">
                                     <h5 class="card-title fw-bold">Aramco Inventory</h5>
-                                    <p class="card-text project-description text-muted">A robust inventory management
-                                        system built for Aramco with offline-first architecture, ensuring seamless
-                                        operation in remote areas with poor connectivity. Features barcode scanning and
-                                        real-time sync.</p>
+                                    <p class="card-text text-muted small mb-3">Robust inventory management
+                                        system built for Aramco with offline-first architecture.</p>
                                     <div class="mb-3">
-                                        <span
-                                            class="badge tech-badge bg-primary bg-opacity-10 text-primary me-1">Flutter</span>
-                                        <span
-                                            class="badge tech-badge bg-secondary bg-opacity-10 text-secondary me-1">Hive</span>
-                                        <span
-                                            class="badge tech-badge bg-info bg-opacity-10 text-info me-1">Offline-First</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Flutter</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Hive</span>
+                                        <span class="tech-item-enhanced badge-sm py-1 px-2 border fs-7">Offline</span>
                                     </div>
                                     <div class="d-flex gap-2 flex-wrap">
                                         <span class="badge bg-light text-muted border px-2 py-1"><i
@@ -673,8 +486,6 @@
                     </div>
                 </div>
 
-                <!-- ============ FREELANCE SECTION REMOVED ============ -->
-
             </div>
         </section>
 
@@ -682,37 +493,37 @@
         <section class="py-5 bg-white">
             <div class="container px-5">
                 <div class="text-center mb-5" data-aos="fade-up">
-                    <h2 class="fw-bolder mb-3"><span class="gradient-text">Technologies Used</span></h2>
+                    <h2 class="fw-bolder mb-3"><span class="gradient-text-premium">Technologies Used</span></h2>
                     <p class="text-muted">The tech stack powering these projects</p>
                 </div>
 
                 <div class="row g-3 justify-content-center" data-aos="fade-up">
-                    <div class="col-auto"><span class="badge bg-primary px-3 py-2 fs-6">Flutter</span></div>
-                    <div class="col-auto"><span class="badge bg-success px-3 py-2 fs-6">Django REST</span></div>
-                    <div class="col-auto"><span class="badge bg-warning text-dark px-3 py-2 fs-6">Firebase</span></div>
-                    <div class="col-auto"><span class="badge bg-info px-3 py-2 fs-6">BLoC/Cubit</span></div>
-                    <div class="col-auto"><span class="badge bg-danger px-3 py-2 fs-6">Dart Isolates</span></div>
-                    <div class="col-auto"><span class="badge bg-secondary px-3 py-2 fs-6">PostgreSQL</span></div>
-                    <div class="col-auto"><span class="badge bg-dark px-3 py-2 fs-6">Docker</span></div>
-                    <div class="col-auto"><span class="badge bg-primary px-3 py-2 fs-6">CI/CD</span></div>
-                    <div class="col-auto"><span class="badge bg-success px-3 py-2 fs-6">Google Maps</span></div>
-                    <div class="col-auto"><span class="badge bg-info px-3 py-2 fs-6">FastAPI</span></div>
+                    <div class="col-auto"><span class="tech-item-enhanced px-3 py-2">Flutter</span></div>
+                    <div class="col-auto"><span class="tech-item-enhanced px-3 py-2">Django REST</span></div>
+                    <div class="col-auto"><span class="tech-item-enhanced px-3 py-2">Firebase</span></div>
+                    <div class="col-auto"><span class="tech-item-enhanced px-3 py-2">BLoC/Cubit</span></div>
+                    <div class="col-auto"><span class="tech-item-enhanced px-3 py-2">Dart Isolates</span></div>
+                    <div class="col-auto"><span class="tech-item-enhanced px-3 py-2">PostgreSQL</span></div>
+                    <div class="col-auto"><span class="tech-item-enhanced px-3 py-2">Docker</span></div>
+                    <div class="col-auto"><span class="tech-item-enhanced px-3 py-2">CI/CD</span></div>
                 </div>
             </div>
         </section>
 
         <!-- Call to action section-->
-        <section class="py-5 bg-gradient-primary-to-secondary text-white">
-            <div class="container px-5 my-5">
+        <section class="py-5 bg-gradient-primary-to-secondary text-white position-relative overflow-hidden">
+            <div class="container px-5 my-5 position-relative z-1">
                 <div class="text-center">
                     <h2 class="display-5 fw-bolder mb-4">Ready to Build Your Next App?</h2>
-                    <p class="lead mb-4">Let's discuss how I can help bring your idea to life with Flutter and Django.
+                    <p class="lead mb-4 opacity-75">Let's discuss how I can help bring your idea to life with Flutter
+                        and Django.
                     </p>
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a class="btn btn-light btn-lg px-4" href="contact.html">
+                        <a class="btn btn-light btn-lg px-4 rounded-pill shadow-lg text-primary fw-bold"
+                            href="contact.html">
                             <i class="bi bi-envelope me-2"></i>Get In Touch
                         </a>
-                        <a class="btn btn-outline-light btn-lg px-4" href="resume.html">
+                        <a class="btn btn-outline-light btn-lg px-4 rounded-pill" href="resume.html">
                             <i class="bi bi-file-person me-2"></i>View Resume
                         </a>
                     </div>
@@ -722,11 +533,11 @@
     </main>
 
     <!-- Footer-->
-    <footer class="bg-white py-4 mt-auto">
+    <footer class="bg-white py-4 mt-auto border-top">
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                 <div class="col-auto">
-                    <div class="small m-0">Copyright &copy; Mohamed Dewidar 2025. All rights reserved.</div>
+                    <div class="small m-0 text-muted">Copyright &copy; Mohamed Dewidar 2025. All rights reserved.</div>
                 </div>
                 <div class="col-auto">
                     <a class="small text-muted text-decoration-none me-3" href="https://github.com/dewidarr"
@@ -753,7 +564,7 @@
             AOS.init({
                 duration: 800,
                 once: true,
-                offset: 100
+                offset: 50
             });
 
             // Project filtering
@@ -783,7 +594,7 @@
                     });
 
                     // Refresh AOS
-                    AOS.refresh();
+                    setTimeout(() => AOS.refresh(), 100);
                 });
             });
         });
